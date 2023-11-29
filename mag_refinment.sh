@@ -27,7 +27,7 @@ echo "Usage: $0 seed_contigs_path pacbio_path fw_reads_path rv_reads_path projec
 echo ""
 echo "requires 7 positional arguments:"
 echo "contigs:		path to fasta file with seed contigs"
-echo "pacbio reads:		path to the reverse reads"
+echo "pacbio reads:	path to the pacbio reads"
 echo "fw reads:		path to the forward reads"
 echo "rv reads:		path to the reverse reads"
 echo "project name:	prefix for files"
@@ -70,7 +70,7 @@ samtools view -bShu ${NAME}_illuminamap.sam | samtools sort -m 97G -@ 4 - -o ${N
 samtools index ${NAME}_illuminamap_sorted.bam
 
 # filter mapped reads 98% id, 50% mapped
-coverm filter --bam-files ${NAME}_illuminamap_sorted.bam -o ${NAME}_illuminamap_sorted_filtered.bam --min-read-percent-identity 98 --min-read-aligned-percent 50
+coverm filter --bam-files ${NAME}_illuminamap_sorted.bam -o ${NAME}_illuminamap_sorted_filtered.bam --min-read-percent-identity 98 --min-read-aligned-percent 80
 samtools sort -o ${NAME}_illuminamap_sorted_filtered_sort.bam --threads $THREADS ${NAME}_illuminamap_sorted_filtered.bam
 samtools fastq -1 ${NAME}_illuminamap_98_80_R1.fastq -2 ${NAME}_illuminamap_98_80_R2.fastq ${NAME}_illuminamap_sorted_filtered_sort.bam
 
