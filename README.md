@@ -6,7 +6,7 @@ mag_refinement.sh currently also uses two helper scripts, fasta_to_gc_cov_length
 
 The current version of the script was developed to include short-read (Illumina paired end) as well as long-read (Pacbio HIFI reads) metagenome data. The mapped long reads are included in the assembly as single end reads. However, the script could easily be modified to run on short-read data only by removing the lines related to the mapping of the pacbio reads and removing the argument for the single end reads in the assembly.
 
-## Dependencies
+## Dependencies and requirements
 mag_refinement.sh uses the following publically available software (with the respective version I am currently using the script with in brackets):
 [minimap2](https://github.com/lh3/minimap2) (v2.22-r1101),
 [samtools](https://github.com/samtools/samtools) (v1.14),
@@ -19,6 +19,7 @@ For mag_refinement.sh to successfully find all the dependencies, [minimap2](http
 [coverM](https://github.com/wwood/CoverM) and
 [SeqKit](https://github.com/shenwei356/seqkit) need to be installed in a conda environment called "read_mapping", while [SPAdes](https://github.com/ablab/spades) needs to be installed in a conda environment called "assembly".
 
+mag_refinement.sh has been developed on Linux 4.9.0-17-amd64 x86_64 using Debian 9
 
 
 
