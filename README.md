@@ -21,5 +21,17 @@ For mag_refinement.sh to successfully find all the dependencies, [minimap2](http
 
 mag_refinement.sh has been developed on Linux 4.9.0-17-amd64 x86_64 using Debian 9
 
+## Installation
+Just download mag_refinment.sh plus the two helper scritps (fasta_to_gc_cov_length_tab.pl and tab_to_fasta.pl) into your desired directory.
 
+## Usage
+**./mag_refinment.sh seed_contigs_path pacbio_path fw_reads_path rv_reads_path project_name no_of_iterations threads**  
+with  
+**seed_contigs_path**  path to fasta file with seed contigs  
+**pacbio_path**  path to pacbio reads  
+**fw_reads_path**  path to forward reads  
+**rv_reads_path**  path to reverse reads  
+**project_name**  prefix for output files  
+**no_of_iterations**  number of iterations to run  
+**threads**  number of threads to use where appropriate  
 
