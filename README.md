@@ -48,5 +48,6 @@ Hyphomonas neptunium ATCC 15444	(GCA_000013025.1) and
 Synechococcus sp. CC9311	(GCA_000014585.1).  
 The artificial reads were created using randomreads.sh (part of [bbtools](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/)).  
 An artificial MAG was created for Candidatus Pelagibacter ubique HTCC1062, comprising nine 100kb fragments with 50kb gaps in between (except for the gap between the last and the first contig, which is only ~8kb).  
+
 Running mag_refinement.sh with our test dataset using 50 threads and 30 iterations (~42 min runtime), the size of the MAG increased from 900kb to 1.2Mb, while the number of contigs decreased from 9 to 7, thus improving size and continguity of the MAG (it is likely that the MAG could be improved even more by running more iterations).
 
