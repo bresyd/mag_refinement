@@ -35,7 +35,7 @@ with
 **no_of_iterations**  number of iterations to run  
 **threads**  number of threads to use where appropriate  
 While the script is running, you can check the number of contigs and the (rough) total size of each iteration with the two commands `wc -c  it*/spades*/*filtered.fa` and `wc -l  it*/spades*/*filtered.tab`. Once the total size and number of contigs is stable, you might terminate the script and start looking at your assemblies.
-I also highly recommend checking (and if necessary refining) the assembled contigs from iterations of interest using the anvi'o programm [anvi-refine](https://anvio.org/help/main/programs/anvi-refine/). 
+I highly recommend checking (and if necessary refining) the assembled contigs from iterations of interest using the anvi'o programm [anvi-refine](https://anvio.org/help/main/programs/anvi-refine/). 
 
 
 
@@ -46,7 +46,7 @@ Maribacter sp. HTCC2170	(GCA_000153165.2),
 Polaribacter sp. MED152	(GCA_000152945.2),
 Hyphomonas neptunium ATCC 15444	(GCA_000013025.1) and
 Synechococcus sp. CC9311	(GCA_000014585.1).  
-The artificial reads were created using randomreads.sh (part of [bbtools](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/)).
-An artificial MAG was created for Candidatus Pelagibacter ubique HTCC1062, comprising nine 100kb fragments with 50kb gaps in between (except for the gap between the last and the first contig, which is only ~8kb).
+The artificial reads were created using randomreads.sh (part of [bbtools](https://jgi.doe.gov/data-and-tools/software-tools/bbtools/)).  
+An artificial MAG was created for Candidatus Pelagibacter ubique HTCC1062, comprising nine 100kb fragments with 50kb gaps in between (except for the gap between the last and the first contig, which is only ~8kb).  
 Running mag_refinement.sh with our test dataset using 50 threads and 30 iterations (xxx time), the size of the MAG increased from 900kb to xxx, while the number of contigs decreased from 9 to xxx, thus improving size and continguity of the MAG.
 
