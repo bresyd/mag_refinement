@@ -132,7 +132,7 @@ for ITERATION in $(eval echo "{$START..$END}") ; do
 	# old way of filtering for length, could/should be replaced by seqkit command
   	cd spades_${NAME}
 	fasta_to_gc_cov_length_tab.pl scaffolds.fasta scaf.tab
-	awk '$3 >= 2000 {print $0}' scaf.tab > scaf_filtered.tab
+	awk '$3 >= 1000 {print $0}' scaf.tab > scaf_filtered.tab
 	tab_to_fasta.pl scaf_filtered.tab scaf_filtered.fa 3
 	cd ../../
 done
